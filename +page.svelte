@@ -32,7 +32,7 @@
 
   // Qualtrics allows embedded data to be up to 20,000 ASCII characters long.
   // For more info: https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/embedded-data/#BestPractices
-  const QUALTRICS_MAX_DATA_LENGTH = 20000 // ASCII characters
+  const QUALTRICS_MAX_DATA_LENGTH = 1000000 // ASCII characters
 
   // Slider has labels in the [-5;5] range but internally these values are
   // mapped to the [1; 11] range.
@@ -177,7 +177,7 @@
 
     if (output.length >= QUALTRICS_MAX_DATA_LENGTH) {
       alert(
-        'Sorry, the drawing exceeds the allowed size. Your last stroke cannot be saved.'
+        'Entschuldigung, die Zeichnung überschreitet die zulässige Größe. Dein letzter Strich kann nicht gespeichert werden.'
       )
       undo()
     }
